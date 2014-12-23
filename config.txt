@@ -1,0 +1,36 @@
+title         = Raspberry:
+location      = Ispra labs
+position      = 45.810255, 8.631245
+IDdevice      = IDSL-01
+SaveURL       = http://webcritech.jrc.ec.europa.eu/TAD_server/EnterData.aspx?idDevice$EQ$IDdevice&log$EQ\$S$IDdevice,$DATE,$TIME,$TEMP,$PRESS,$LEV,$FORE30,$FORE300,$RMS,$ALERT_LEVEL,$ALERT_SIGNAL,$V1,$V2,\$E
+AlertURL      = http://webcritech.jrc.ec.europa.eu/TAD_server/EnterAlert.aspx?idDevice$EQ$IDdevice&AlertLevel$EQ$ALERT_SIGNAL&DateTime$EQ$DATE $TIME&SignalType$EQTAD&AlertType$EQAUTO&Lev$EQ$LEV
+Interval      = 5 
+n300          = 600
+n30           = 60 
+threshold     = 0.08
+ratioRMS      = 4
+AddRMS        = 0.1 
+backFactor    = 0
+
+sensorMultFac = -1
+sensorAddFac  = 3.32
+
+Serial        = /dev/ttyUSB0
+BaudRate      = 9600
+xCommands      = /dev/ttyUSB1
+
+xgpsSerial     = /dev/ttyACM0
+gpsRate       = 9600
+gpsURL        = http://webcritech.jrc.ec.europa.eu/TAD_server/EnterData.aspx?idDevice$EQ$IDdevice&lon$EQ$LON&lat$EQ$LAT&hei$EQ$HEI
+gpsDeltaTSave = 300
+
+batteryPin    = 1
+batteryMultiplier=0
+xxbatteryMultiplier=5.93386
+panelMultiplier=1
+panelPin      = 5
+
+voltageInterval = 5
+
+
+http://webcritech.jrc.ec.europa.eu/TAD_server/EnterData.aspx?idDevice=ARD-01a&log=$SARD-01,$DATE,$TIME,$TEMP,$PRESS,$LEV,$FORE30,$FORE300,$RMS,$ALERT_LEVEL,$ALERT_SIGNAL,$V1,$V2,$E
